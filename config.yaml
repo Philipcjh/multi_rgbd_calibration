@@ -1,0 +1,44 @@
+# 数据存放目录
+data_path: data/
+# 第几组数据目录
+num_path: 2/
+# RGB图片名称
+rgb_filename: undistortion-0.png
+# 深度图（CV16U）
+depth_filename: MappedDepth-0.png
+# 深度图（压缩过，仅用于检查深度图对齐到RGB相机坐标系的效果）
+depth_align_filename: MappedDepth-0.jpg
+# 标记了棋盘格角点的RGB图
+corners_rgb_filename: corners.png
+# 提取到的角点三维坐标保存文件
+corners_points_filename: corners_points3d.txt
+
+# 采集图像的分辨率
+camera_resolution: 1280_960
+# 采集数据的相机位置 left_top（左上）, left_bottom（左下）, right_top（右上）, right_bottom（右下）
+camera_location: left_top
+# 对齐参照的相机位置，默认对齐到左上角
+align_camera_location: left_top
+
+# 相机内参，根据相机位置和相机分辨率选择对应的内参
+camera_intrinsics:
+  left_top:
+    640_480:
+      [465.636, 0, 344.335, 0, 465.548, 231.575, 0, 0, 1]
+    1280_960:
+      [931.271, 0, 688.67, 0, 931.096, 463.15, 0, 0, 1]
+  left_bottom:
+    640_480:
+      [465.656, 0, 327.451, 0, 465.585, 234.011, 0, 0, 1]
+    1280_960:
+      [931.312, 0, 654.902, 0, 931.17, 468.021, 0, 0, 1]
+  right_top:
+    640_480:
+      [463.733, 0, 320.423, 0, 463.744, 241.954, 0, 0, 1]
+    1280_960:
+      [927.466, 0, 640.846, 0, 927.488, 483.908, 0, 0, 1]
+  right_bottom:
+    640_480:
+      [465.374, 0, 321.345, 0, 465.266, 238.745, 0, 0, 1]
+    1280_960:
+      [930.748, 0, 642.69, 0, 930.533, 477.491, 0, 0, 1]
