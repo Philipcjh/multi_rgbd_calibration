@@ -19,7 +19,7 @@
 根据相机内参和深度图，还原棋盘格角点在RGB相机坐标系下的三维坐标并保存。
 
 ## 5. 求相机之间的变换矩阵
-读取步骤4中不同相机中同一棋盘格角点的三维坐标，使用Kabsch算法求解变换矩阵，默认对齐到left-top（左上）相机。
+使用[register_pointclouds.py](register_pointclouds.py)读取步骤4中不同相机中同一棋盘格角点的三维坐标，使用Kabsch算法求解变换矩阵，默认对齐到left-top（左上）相机。
 
 ## 6. 点云拼接
 使用CloudCompare打开xyz文件，并选中待变换的点云，在菜单栏选择Edit->Apply Transformation，修改变换矩阵为步骤5中求得的结果，点击OK即可完成拼接。拼接结果如图所示：
