@@ -16,7 +16,7 @@ corners_points_filename: corners_points3d.txt
 # 采集图像的分辨率
 camera_resolution: 1280_960
 # 采集数据的相机位置 left_top（左上）, left_bottom（左下）, right_top（右上）, right_bottom（右下）
-camera_location: left_top
+camera_location: left_bottom
 # 对齐参照的相机位置，默认对齐到左上角
 align_camera_location: left_top
 
