@@ -72,6 +72,7 @@ if __name__ == "__main__":
     formatted_output = '\n'.join(' '.join('{:0.12f}'.format(x) for x in row) for row in T)
     print(formatted_output)
     
-    trans_txt = 'data/' + camera_location1 + '/' + camera_location1 + '2' + camera_location2 +'.txt'
+    txt_filename = camera_location1 + '2' + camera_location2 +'.txt'
+    trans_txt = 'data/' + camera_location1 + '/' + config["num_path"] + txt_filename
     np.savetxt(trans_txt, T, fmt='%.12f', delimiter='\t')
     
